@@ -11,8 +11,8 @@
 
 int main()
 {
-	int ch;
-	for(ch = 'a'; <= 'z'; ch++)
-		putchar(ch);
+	int x;
+	for(x = 'a'; x <= 'z'; x++)
+		putchar(x);
 	return (0);
 }
