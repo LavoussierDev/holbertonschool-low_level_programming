@@ -21,7 +21,10 @@ int main(void)
 	{
 		putchar(',');
 	}
-		putchar(' ');
+		if (x != '9')
+		{
+			putchar(' ');
+		}
 	}
 		putchar('\n');
 	return (0);
