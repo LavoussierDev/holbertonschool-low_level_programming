@@ -1,0 +1,8 @@
+src_files = school.c main.cb
+
+all:
+
+CC = gcc
+
+school: main.c school.c
+	 gcc main.c school.c -o school
