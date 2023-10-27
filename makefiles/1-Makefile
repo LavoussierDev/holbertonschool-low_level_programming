@@ -1,8 +1,9 @@
-src_files = school.c main.cb
-
-all:
+src_files = school.c main.c
 
 CC = gcc
 
-school: main.c school.c
-	 gcc main.c school.c -o school
+all:
+	$(src_files) $(CC) -o school
+
+clean:
+	rm -r school
