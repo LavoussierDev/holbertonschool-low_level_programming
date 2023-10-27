@@ -5,7 +5,7 @@ NAME = school
 RM = rm -rf
 
 all: ${OBJ}
-	${CC} ${SRC} -o ${NAME}
+	${CC} ${OBJ} -o ${NAME}
 
 %.o: %.c
 	${CC} -c $< -o $@
@@ -14,7 +14,7 @@ clean:
 	${RM} * ${NAME}
 
 oclean:
-	${RM} ${OBJ}
+	${RM}  ${OBJ}
 
 fclean: clean oclean
 	
