@@ -4,17 +4,18 @@
  * _strlen - returns string length
  * @s: input of chars
  *
- * Return: 0
+ * Return: outputs counted results,
+ * of a string or character.
  */
 
 int _strlen(char *s)
 {
-	int x;
+	int x = 0;
 
-	for(x = 0; s[x] != '\0'; x++)
+	while (s[x] != '\0')
 	{
-		return(x);
+		x++;
 	}
-	return (0);
+	return (x);
 }
 
