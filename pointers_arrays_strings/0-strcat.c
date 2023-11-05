@@ -2,8 +2,8 @@
 
 /**
  * _strcat - concatenates the string
- * @dest:
- * @char:
+ * @dest: receives character
+ * @src: also receives character
  *
  * Return: Characters
  */
@@ -15,7 +15,7 @@ char *_strcat(char *dest, char *src)
 	while (*temp != '\0')
 	{
 		temp++;
-    }
+	}
 	while (*src != '\0')
 	{
 		*temp = *src;
@@ -24,5 +24,5 @@ char *_strcat(char *dest, char *src)
 	}
 	*temp = '\0';
 
-	return dest;
+	return (dest);
 }
