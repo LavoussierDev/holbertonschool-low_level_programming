@@ -9,27 +9,26 @@
 
 char *cap_string(char *str)
 {
-	int x = 1;
+	int x, y, upper = 32;
+	char separators[] = {',', ';', '.', '?',
+	'"', '(', ')', '{', '}', ' ', '\n', '\t'};
 
-	while (*str != '\0')
+	for (y = 0; str[y] != '\0'; y++)
 	{
-		if (*str == ' ' || *str == '\t' || *str == '\n' ||
-		*str == ',' || *str == ';' || *str == '.' || *str == '!' ||
-		*str == '?' || *str == '"' || *str == '(' || *str == ')'
-		|| *str == '{' || *str == '}')
+		if (str[y] >= 'a' && str[y] <= 'z')
 		{
-			x = 1;
+			str[y] = str[y] - upper;
 		}
-		else if (x && ((*str >= 'a' && *str <= 'z')
-					|| (*str >= 'A' && *str <= 'Z')))
+
+		upper = 0;
+		for (x = 0; x <= 11; x++)
 		{
-			if (*str >= 'a' && *str <= 'z')
+			if (str[y] == separators[x])
 			{
-				*str -= ('a' - 'A');
+				x = 11;
+				upper = 32;
 			}
-			x = 0;
 		}
-		str++;
 	}
 	return (str);
 }
