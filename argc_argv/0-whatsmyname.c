@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * main - program prints it's own name.
+ * main - Entry point.
  * @argc: amount of arguments typed
  * @argv: array points to arguments
  *
