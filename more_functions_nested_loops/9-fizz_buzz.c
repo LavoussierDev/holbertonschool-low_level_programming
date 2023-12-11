@@ -1,17 +1,35 @@
 #include <stdio.h>
-#include "main.h"
+#include <stdlib.h>
 
-/**
- * main - Entry point
- *
- * Return: Results
- */
-
-int main()
+int main(void)
 {
-	int d, f, b, fb;
+	int x;
+		/* mult, mulf;*/
 
-	for (d = 1; d <= 100; d++)
+	for (x = 1; 1 < 100; x++)
 	{
-		if ((3 * 
+	/*	mult = '0' + (x * 3);
+		mulf = '0' + (x * 5);*/
 
+		if (x > 9)
+		{
+			putchar('0' + (x / 10));
+		}
+/*		if (x == mult)
+		{
+			printf("Fizz");
+		}
+		if (x == mulf)
+		{
+			printf("Buzz");
+		}
+		else if (x == mult && x == mulf)
+		{
+			printf("FizzBuzz");
+		}*/
+		else
+		{
+			putchar('0' + (x % 10));
+		}
+	}
+}
