@@ -21,3 +21,4 @@ char *cap_string(char *);
 char *rot13(char *);
 void print_number(int n);
 char *leet(char *);
+char *_memset(char *s, char b, unsigned int n);
