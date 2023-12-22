@@ -1,35 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - FizzBuzz Solution
+ * Return: 0
+ */
 int main(void)
 {
 	int x;
-		/* mult, mulf;*/
 
-	for (x = 1; 1 < 100; x++)
+	for (x = 1; x <= 100; x++)
 	{
-	/*	mult = '0' + (x * 3);
-		mulf = '0' + (x * 5);*/
-
-		if (x > 9)
+		if (!(x % 3 == 0 || x % 5 == 0))
 		{
-			putchar('0' + (x / 10));
+			printf("%d", x);
 		}
-/*		if (x == mult)
-		{
-			printf("Fizz");
-		}
-		if (x == mulf)
-		{
-			printf("Buzz");
-		}
-		else if (x == mult && x == mulf)
-		{
-			printf("FizzBuzz");
-		}*/
 		else
 		{
-			putchar('0' + (x % 10));
+			if ((x % 3 == 0) && (x % 5 != 0))
+			{
+				printf("Fizz");
+			}
+			else if ((x % 3 != 0) && (x % 5 == 0))
+			{
+				printf("Buzz");
+			}
+			else
+			{
+				printf("FizzBuzz");
+			}
+		}
+		if (x < 100)
+		{
+			printf(" ");
+		}
+		else
+		{
+			printf("\n");
 		}
 	}
+	return (0);
 }
