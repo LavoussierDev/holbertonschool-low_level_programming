@@ -4,7 +4,7 @@
  * print_line - draws a straight line in the terminal
  * @n: amount of times the line will be printed.
  *
- * Return:
+ * Return: void
  */
 
 void print_line(int n)
@@ -16,9 +16,11 @@ void print_line(int n)
 		_putchar('\n');
 	}
 	else
-		for (z = 1; z <= n; z++)
 	{
-		_putchar('_');
+		for (z = 1; z <= n; z++)
+		{
+			_putchar('_');
+		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
