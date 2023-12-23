@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * free_grid -  frees a 2 dimensional grid previously created by alloc_grid function.
+ * free_grid -  frees array from a previous function.
  * @grid: pointer to an array of ints
  * @height: quantity of rows in the array
  */
