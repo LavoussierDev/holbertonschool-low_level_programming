@@ -10,21 +10,19 @@
  * Return: The index of matching array elements
  */
 
-int linear_search(int *arr, size_t size, int target) {
-    int index = 0, result = -1;
+int linear_search(int *arr, size_t size, int target)
+{
+    size_t index = 0;
 
-    if (arr == NULL || size == 0)
+    if (arr == NULL)
         return -1;
 
-    while (index < (int)size) {
-        printf("Value checked arr[%d] = [%d]\n", index, arr[index]);
-        if (arr[index] == target) {
-            result = index;
-            break;
-        }
-        index++;
+    for (index = 0; index < size; index++)
+	{
+        printf("Value checked arr[%lu] = [%d]\n", index, arr[index]);
+        if (arr[index] == target)
+            return (int)index;
     }
 
-    return result;
+    return -1;
 }
-
