@@ -25,27 +25,26 @@ void print_subarray(int *arr, size_t f, size_t l)
  */
 int binary_search(int *arr, size_t s, int v)
 {
-    size_t f = 0;
-    size_t l = 0;
-    size_t m = 0;
+	size_t f = 0;
+	size_t l = 0;
+	size_t m = 0;
 
-    if (arr == NULL || s == 0)
-        return -1;
+	if (arr == NULL || s == 0)
+		return -1;
 
-    l = s - 1;
+	l = s - 1;
 
-    while (f <= l)
+	while (f <= l)
 	{
-        print_subarray(arr, f, l);
-        m = (f + l) / 2;
-        if (arr[m] > v)
-            l = m - 1;
-        else if (arr[m] < v)
-            f = m + 1;
-        else
-            return (int)m;
-    }
+		print_subarray(arr, f, l);
+		m = (f + l) / 2;
+		if (arr[m] > v)
+			l = m - 1;
+		else if (arr[m] < v)
+			f = m + 1;
+		else
+			return (int)m;
+	}
 
-    return -1;
+	return -1;
 }
-
